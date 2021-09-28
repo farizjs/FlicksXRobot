@@ -28,7 +28,7 @@ from JisooX.modules.connection import connect_button
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
+_My name is_ *{}*\n_A Saya adalah bot Telegram pro yang dapat membantu grup anda, Tambahkan saya ke grup anda!_
 _Maintained by_ [{}](tg://user?id={})
 """
 
@@ -57,7 +57,7 @@ def vercheck() -> str:
 
 SOURCE_STRING = """
 *🛍️ I'm Built In Python3, Using The Python-Telegram-Bot Library, And Am Fully Opensource - You Can Find What Makes Me Tick* [Here Repository](https://github.com/ridho17-ind/FlicksXRobot)
-*🥺 You Can Clone Me* [Here Deploy](https://heroku.com/deploy?template=https://github.com/ridho17-ind/FlicksXRobot.git)
+*🥺 You Can Clone Me* [Here Deploy](https://heroku.com/deploy?template=https://github.com/fjgaming212/FlicksXRobot.git)
 """
 
 
@@ -177,8 +177,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="ʜᴇʟᴘ",callback_data="help_back"),InlineKeyboardButton(text="ᴅᴇᴠᴏʟᴏᴘᴇʀ",url="https://t.me/Sadroomsinfo/83")]]
-    keyboard += [[InlineKeyboardButton(text="ᴄᴏɴɴᴇᴄᴛɪɴɢ", callback_data="main_connect"),InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="ʜᴇʟᴘ",callback_data="help_back"),InlineKeyboardButton(text="ᴅᴇᴠᴏʟᴏᴘᴇʀ📲",url="https://t.me/FJ_GAMING")]]
+    keyboard += [[InlineKeyboardButton(text="ᴄᴏɴɴᴇᴄᴛɪɴɢ", callback_data="main_connect"),InlineKeyboardButton(text="➕ Add Me ➕",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
@@ -279,7 +279,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Pm Me To Get The List Of Commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="ʜᴇʟᴘ ʜᴇʀᴇ",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="ᴄᴏɴᴛᴀᴄᴛ ᴄʀᴇᴀᴛᴏʀ",url="https://t.me/XFLSkyzo")]]))
+                                                [InlineKeyboardButton(text="ᴄᴏɴᴛᴀᴄᴛ ᴄʀᴇᴀᴛᴏʀ",url="https://t.me/FJ_GAMING")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
