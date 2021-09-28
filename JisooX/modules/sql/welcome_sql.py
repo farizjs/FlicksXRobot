@@ -5,8 +5,8 @@ from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, BigInteger
 from JisooX.modules.helper_funcs.msg_types import Types
 from JisooX.modules.sql import SESSION, BASE
 
-DEFAULT_WELCOME = "Hey {first}, Welcome to {chatname}! How are you?"
-DEFAULT_GOODBYE = "Nice knowing ya!"
+DEFAULT_WELCOME = "Hai {first}, Selamat datang di {chatname}! Semoga betah ya?"
+DEFAULT_GOODBYE = "Selamat tinggal kawan!"
 
 class Welcome(BASE):
     __tablename__ = "welcome_pref2"
